@@ -1,0 +1,27 @@
+1.
+MATCH (allMovies:Movie) RETURN allMovies.title
+
+2.
+MATCH (hugo:Person {name: "Hugo Weaving"})-[:ACTED_IN]->(HugoMovies) RETURN hugo,HugoMovies
+
+3.
+MATCH (hugo:Person {name: "Hugo Weaving"})-[:ACTED_IN]->(movies)<-[:DIRECTED]-(directors) RETURN directors.name
+
+4.
+MATCH (hugo:Person {name: "Hugo Weaving"})-[:ACTED_IN]->(m)<-[:ACTED_IN]-(coActors) RETURN coActors.name
+
+5.
+MATCH (matix {title: "The Matrix"})<-[:ACTED_IN]-(actors)-[:ACTED_IN]->(movies) RETURN movies.title
+
+6.
+match (actors: Person)-[:ACTED_IN]->(movie) return actors.name, count(movie) as moviecount order by moviecount DESC
+
+7.
+MATCH (p1:Person)-[w:WROTE]->(movie)<-[r:PRODUCED]-(p2)
+WHERE p1.name = p2.name
+RETURN p1,movie
+
+8.
+MATCH (p1:Person)-[w:WROTE]->(movie)<-[r:PRODUCED]-(p2)
+WHERE p1.name = p2.name
+RETURN p1,movie
