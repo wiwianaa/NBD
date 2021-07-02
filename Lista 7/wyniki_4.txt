@@ -1,0 +1,19 @@
+HTTP/1.1 204 No Content
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Date: Thu, 01 Jul 2021 21:30:07 GMT
+Content-Type: application/json
+Content-Length: 0
+
+HTTP/1.1 200 OK
+X-Riak-Vclock: a85hYGBgzGDKBVI8+xkWvudtS9gJEUpkzmNluL8+6BZfFgA=
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Link: </buckets/s23685>; rel="up"
+Last-Modified: Thu, 01 Jul 2021 21:30:07 GMT
+ETag: "5CRdyqxlSjMfnBPUeccHCq"
+Date: Thu, 01 Jul 2021 21:30:13 GMT
+Content-Type: application/json
+Content-Length: 48
+
+{name:Aga,surname:T,pets:false,email:at@gm.com}'

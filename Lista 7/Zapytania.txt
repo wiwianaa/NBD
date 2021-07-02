@@ -1,0 +1,41 @@
+1.
+curl -i -X PUT -H "Content-Type: application/json" -d {"name":"Aga","surname":"T","pets":false,"age":25}' http://localhost:8098/buckets/s23685/keys/Aga
+curl -i -X PUT -H "Content-Type: application/json" -d {"name":"Ola","surname":"W","pets":true,"age":14}' http://localhost:8098/buckets/s23685/keys/Ola
+curl -i -X PUT -H "Content-Type: application/json" -d {"name":"Ula","surname":"G","pets":true,"age":30}' http://localhost:8098/buckets/s23685/keys/Ula
+curl -i -X PUT -H "Content-Type: application/json" -d {"name":"Mat","surname":"A","pets":true,"age":22}' http://localhost:8098/buckets/s23685/keys/Mat
+curl -i -X PUT -H "Content-Type: application/json" -d {"name":"Tom","surname":"R","pets":false,"age":100}' http://localhost:8098/buckets/s23685/keys/Tom
+curl -i http://localhost:8098/buckets/s23685/keys?keys=true > wyniki_1.txt 
+
+2.
+curl -i http://localhost:8098/buckets/s23685/keys/Aga > wyniki_2.txt
+
+3.
+curl -i -X PUT -H "Content-Type: application/json" -d {"name":"Aga","surname":"T","pets":false,"age":25,"email":"at@gm.com"}' http://localhost:8098/buckets/s23685/keys/Aga > wyniki_3.txt
+curl -i http://localhost:8098/buckets/s23685/keys/Aga >> wyniki_3.txt
+
+4.
+curl -i -X PUT -H "Content-Type: application/json" -d {"name":"Aga","surname":"T","pets":false,"email":"at@gm.com"}' http://localhost:8098/buckets/s23685/keys/Aga > wyniki_4.txt
+curl -i http://localhost:8098/buckets/s23685/keys/Aga >> wyniki_4.txt
+
+5.
+curl -i -X PUT -H "Content-Type: application/json" -d {"name":"Aga","surname":"Q","pets":false,"email":"at@gm.com"}' http://localhost:8098/buckets/s23685/keys/Aga > wyniki_5.txt
+curl -i http://localhost:8098/buckets/s23685/keys/Aga >> wyniki_5.txt
+
+6.
+curl -i http://localhost:8098/buckets/s23685/keys?keys=true > wyniki_6.txt
+curl -i -X DELETE http://localhost:8098/buckets/s23685/keys/Tom >> wyniki_6.txt
+curl -i http://localhost:8098/buckets/s23685/keys?keys=true >> wyniki_6.txt
+
+7.
+curl -i http://localhost:8098/buckets/s23685/keys/Tom >> wyniki_7.txt
+
+8.
+curl -i -X POST -H "Content-Type: application/json" -d '{"name":"Dom"}' http://localhost:8098/buckets/s23685/keys/ > wyniki_8.txt
+curl -i http://localhost:8098/buckets/s23685/keys?keys=true >> wyniki_8.txt
+
+9
+curl -i http://localhost:8098/buckets/s23685/keys/94uocgnXkbawn4ZlJn26J69K01x > wyniki_9.txt
+
+10
+curl -i -X DELETE http://localhost:8098/buckets/s23685/keys/94uocgnXkbawn4ZlJn26J69K01x > wyniki_10.txt
+curl -i http://localhost:8098/buckets/s23685/keys?keys=true >> wyniki_10.txt

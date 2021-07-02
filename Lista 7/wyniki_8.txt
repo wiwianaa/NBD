@@ -1,0 +1,16 @@
+HTTP/1.1 201 Created
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Location: /buckets/s23685/keys/94uocgnXkbawn4ZlJn26J69K01x
+Date: Thu, 01 Jul 2021 21:43:47 GMT
+Content-Type: application/json
+Content-Length: 0
+
+HTTP/1.1 200 OK
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Date: Thu, 01 Jul 2021 21:43:52 GMT
+Content-Type: application/json
+Content-Length: 64
+
+{"keys":["Mat","Ola","Ula","Aga","94uocgnXkbawn4ZlJn26J69K01x"]}
